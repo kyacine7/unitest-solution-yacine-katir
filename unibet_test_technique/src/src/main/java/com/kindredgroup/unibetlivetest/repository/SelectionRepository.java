@@ -6,8 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface SelectionRepository extends JpaRepository<Selection, Long> {
+public interface SelectionRepository extends JpaRepository<Selection, Integer> {
 
     List<Selection> getSelectionByStateEquals(SelectionState state);
-
 }

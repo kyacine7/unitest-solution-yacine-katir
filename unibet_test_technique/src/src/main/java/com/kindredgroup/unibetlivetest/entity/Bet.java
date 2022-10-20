@@ -2,14 +2,9 @@ package com.kindredgroup.unibetlivetest.entity;
 
 import com.kindredgroup.unibetlivetest.types.BetState;
 
-import lombok.Data;
-
 import javax.persistence.*;
-
-import java.math.BigDecimal;
 import java.util.Date;
 
-@Data
 @Table(name = "bet")
 @Entity
 public class Bet {
@@ -33,10 +28,9 @@ public class Bet {
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    private Customer customer;
+    Customer customer;
 
-    @Column(name = "placement")
-    private BigDecimal placement;
+
 
 
 }
