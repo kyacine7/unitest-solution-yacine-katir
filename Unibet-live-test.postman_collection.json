@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "b396613b-c818-4b7c-a510-271410d628de",
+		"name": "Unibet-live-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8887/api/v1/customers/current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8887",
+							"path": [
+								"api",
+								"v1",
+								"customers",
+								"current"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "Get Events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8887/api/v1/events?isLive=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8887",
+							"path": [
+								"api",
+								"v1",
+								"events"
+							],
+							"query": [
+								{
+									"key": "isLive",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Selections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8887/api/v1/events/2/selections?status=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8887",
+							"path": [
+								"api",
+								"v1",
+								"events",
+								"2",
+								"selections"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bet",
+			"item": [
+				{
+					"name": "Get Selections Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"selectionId\" : 2,\r\n    \"cote\":1.0,\r\n    \"mise\":3.2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8887/api/v1/bets/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8887",
+							"path": [
+								"api",
+								"v1",
+								"bets",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
